@@ -6,6 +6,7 @@ A dummy wallet with users able to
 
 Built with 
 - Firebase
+- GraphQL
 - Nestjs
 - Typescript
 - TypeORM
