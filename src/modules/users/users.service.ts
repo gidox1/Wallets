@@ -1,12 +1,10 @@
 import { Injectable, Logger, HttpException, HttpStatus } from '@nestjs/common'
-import {User} from './entities/user'
 import { UserRepository } from './repositories/user.repository'
 import { Firebase } from 'config/firebase'
 import { WalletRepository } from '../wallet/repositories/walletRepository'
 
 @Injectable()
 export class UserService {
-    private users: User[] = [];
     private logger: Logger
 
     constructor(
@@ -16,12 +14,9 @@ export class UserService {
         this.logger = new Logger('UserService.Auth')
       }
 
-    public createUser(args): User {
+    public getStatus() {
         return {
-            userId: "My id",
-            email: "string",
-            phone: 3000330003,
-            name: "string"
+            message: 'healthy!'
         }
     }
 
